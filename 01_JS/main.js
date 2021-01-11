@@ -7,32 +7,32 @@
 
 // var let const 
 
-    // let num = 10.5;
-    // console.log(num);
-    // console.log(typeof(num));
-    // num = 'Vaman "Vaman" Vaman "Vaman" Vaman';
-    // console.log(num);
-    // num = "Vaman 'Vaman' Vaman";
-    // console.log(num);
-    // console.log(typeof(num));
-    // num = true;
-    // console.log(num);
-    // console.log(typeof(num));
+// let num = 10.5;
+// console.log(num);
+// console.log(typeof(num));
+// num = 'Vaman "Vaman" Vaman "Vaman" Vaman';
+// console.log(num);
+// num = "Vaman 'Vaman' Vaman";
+// console.log(num);
+// console.log(typeof(num));
+// num = true;
+// console.log(num);
+// console.log(typeof(num));
 
-    // let firstName = 'Vaman';
-    // // let fullName = firstName + ' Deshmukh';
-    // let fullName = `${firstName} Deshmukh 
-    // Hyderabad`;
-    // console.log(fullName);
-    
+// let firstName = 'Vaman';
+// // let fullName = firstName + ' Deshmukh';
+// let fullName = `${firstName} Deshmukh 
+// Hyderabad`;
+// console.log(fullName);
 
-    // num = 12;
-    // console.log(num);
-    // const num2 = 20;
-    // // num2 = 22;
-    // console.log(num2);
 
-    
+// num = 12;
+// console.log(num);
+// const num2 = 20;
+// // num2 = 22;
+// console.log(num2);
+
+
 
 
 
@@ -42,31 +42,31 @@
 
 // V8       engine to run JS 
 // Chakra   engine to run JS 
- 
+
 // falsy => false, 0, null, '', undefiled
 // truthy 
 
-    // let candidateName = "Sudesh";
-    // if (candidateName) { 
-    //     //
-    // }
-    // else {
-    // }
+// let candidateName = "Sudesh";
+// if (candidateName) { 
+//     //
+// }
+// else {
+// }
 
-    // scope 
+// scope 
 
-    // let a = 1;
-    // console.log(a);
+// let a = 1;
+// console.log(a);
 
-    // function fun() {
-    //     let a = 11;
-    //     let c = 3; // global without var let const 
-    //     console.log(a);
-    //     console.log(c);
-    // }
-    // fun();
-    // console.log(a);
-    // console.log(c);
+// function fun() {
+//     let a = 11;
+//     let c = 3; // global without var let const 
+//     console.log(a);
+//     console.log(c);
+// }
+// fun();
+// console.log(a);
+// console.log(c);
 
 // hoisting - variable hoisting , function hoisting 
 
@@ -167,23 +167,124 @@
 
 // default values to arguments 
 
-let fun8 = (a = 4, b = 5) => {
-    return a + b;
-}
-console.log(fun8());
-console.log(fun8(10));
-console.log(fun8(10, 20));
+// let fun8 = (a = 4, b = 5) => {
+//     return a + b;
+// }
+// console.log(fun8());
+// console.log(fun8(10));
+// console.log(fun8(10, 20));
+
+// let fun = (arg
+//     ) => {
+// };
+
+// in JS function is an object 
+
+// function as argument 
 
 
-let fun = (arg
-    
-    
-    
-    
-    
-    
-    ) => {
-    
+
+// function cube(n) {
+//     return n * n * n;
+// }
+
+// function sumSquare(a, b) {
+//     // return a + b;
+//     return square(a) + square(b);
+// }
+
+// console.log(sumSquare(1, 2));
+
+// function square(n) {
+//     return n * n;
+// }
+
+// function sum(a, b, fn) {
+//     // here 
+//     return fn(a) + fn(b);
+// }
+
+// let num = sum(1, 2, square);
+// console.log(num);
+
+// console.log(sum(1, 2, 3));
+
+// callback functions 
+
+// const doFun = () => {
+//     setTimeout( () => {
+//         return { val: 'Hello!' };
+//     } , 2000);
+// } 
+// const fun = doFun();
+// console.log(fun); // undefined 
+// console.log(fun.val);
+
+// const doFun = (abc) => {
+//     setTimeout(() => {
+//         abc({ val: 'Hello!' });
+//     }, 2000);
+// }
+
+// doFun((fun) => {
+//     console.log(fun.val);
+// });
+// console.log('line 2');
+
+// syntax for arrow funciton let variableName = (a) => {return a}; 
+
+
+// closure - set of all vars in a perticular scope  
+
+// function powerFactory(power) {
+//     return function (number) {
+//         return Math.pow(number, power);
+//     }
+// }
+
+// let num = powerFactory(4);
+// console.log(num(3));
+
+
+// object 
+
+let info = {
+    id: 101,
+    fullName: 'Vaman',
+    salary: 10.5,
+    phones: {
+        home: 1010,
+        office: 2020
+    }
 };
+
+console.log(info.fullName);
+console.log(info.phones.office);
+
+// constructor function 
+function someFun(a, b) {
+    this.a = a;
+    this.b = b;
+}
+
+let obj = new someFun('Vaman', 'Deshmukh');
+console.log(obj.a);
+
+// array 
+
+let myArray = [10, 20, 30, 40, 50];
+
+console.log(myArray[3]);
+ // assignment - methods in array 
+
+// let myDate = new Date();
+// console.log(myDate); 
+
+
+// parse Json
+
+// JSON.parse 
+
+
 
 
