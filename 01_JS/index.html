@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html>
-
 <head>
+    <script type="text/javascript" src='./main.js'></script>
 </head>
-
 <body>
-    <p>Hello</p>
-    <script src='./main3.js'></script>
+    <h1 >Hometown</h1>
+    <p>My Hometown</p>
+    <form> 
+        What is my hometown? 
+        <select name="city">
+            <option value="0">My Hometown</option>
+            <option value="Hyderabad">Hyderabad</option>
+            <option value="Chennai">Chennai</option>
+            <option value="Bengaluru">Bengaluru</option>
+            <option value="Pune">Pune</option>
+            <option value="Mumbai">Mumbai</option>
+        </select>
+        <input type="button" value="Select" onclick="myCity(this.form.city)">  
+    </form>
 </body>
-
 </html>
