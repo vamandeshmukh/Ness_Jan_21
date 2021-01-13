@@ -1,17 +1,3 @@
-// pincode-validator.ts
-/// <reference path="string-validator.ts" />
-var Validation;
-(function (Validation) {
-    var PincodeValidator = /** @class */ (function () {
-        function PincodeValidator() {
-        }
-        PincodeValidator.prototype.isValid = function (s) {
-            return s.length === 6;
-        };
-        return PincodeValidator;
-    }());
-    Validation.PincodeValidator = PincodeValidator;
-})(Validation || (Validation = {}));
 // username-validator.ts
 /// <reference path="string-validator.ts" />
 var Validation;
@@ -25,6 +11,20 @@ var Validation;
         return UsernameValidator;
     }());
     Validation.UsernameValidator = UsernameValidator;
+})(Validation || (Validation = {}));
+// pincode-validator.ts
+/// <reference path="string-validator.ts" />
+var Validation;
+(function (Validation) {
+    var PincodeValidator = /** @class */ (function () {
+        function PincodeValidator() {
+        }
+        PincodeValidator.prototype.isValid = function (s) {
+            return s.length === 6;
+        };
+        return PincodeValidator;
+    }());
+    Validation.PincodeValidator = PincodeValidator;
 })(Validation || (Validation = {}));
 // // app.ts
 // interface StringValidator {
