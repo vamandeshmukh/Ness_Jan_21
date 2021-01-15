@@ -1,0 +1,11 @@
+body {
+    margin-top: 4.5rem;
+}
+
+.product-image {
+    width: 50px;   
+}
+
+#tbl-products tbody tr {
+    cursor: pointer;
+}
