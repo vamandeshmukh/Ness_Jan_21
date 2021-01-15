@@ -27,8 +27,6 @@ app.use('/books', require('./routes/books'));
 app.use('/members', require('./routes/members'));
 app.use('/issues', require('./routes/issues'));
 
-
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
