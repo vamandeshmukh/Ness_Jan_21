@@ -1,0 +1,20 @@
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "description": "express-js project for ness trainees",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "dependencies": {
+    "express": "~4.16.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "vamandeshmukh"
+  },
+  "author": "Vaman Deshmukh",
+  "license": "ISC"
+}

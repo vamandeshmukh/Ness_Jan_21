@@ -1,3 +1,5 @@
+// SET DEBUG=library-app:* & npm run devstart 
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
@@ -21,11 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-
-app.use(require('./routes/authentication'));
-app.use('/books', require('./routes/books'));
-app.use('/members', require('./routes/members'));
-app.use('/issues', require('./routes/issues'));
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

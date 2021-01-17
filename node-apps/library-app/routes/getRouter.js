@@ -1,5 +1,5 @@
 const express = require('express');
-const AuthUtils = require('../utils/auth');
+// const AuthUtils = require('../utils/auth');
 
 const getRouter = (Ctrl, authorizationConfig) => {
     const router = express.Router();
