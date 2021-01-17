@@ -1,27 +1,16 @@
 var express = require('express');
 var router = express.Router();
+
 // Book Model
 const Book = require('../models/Book');
 
-// get all books
 router.get('/', (req, res) => {
-    console.log('books get')
+    console.log('book get')
     Book.find()
         .sort({ date: -1 })
         .then(books => res.json(books))
 });
 
-// get one book 
-router.get('/:id', (req, res) => {
-    console.log('book get');
-    Book.findById(req.params.id, req.body, { new: true }, (err, book) => {
-        if (err) return res.status(500).send(err);
-        return res.send(book);
-    }
-    );
-});
-
-// add a book 
 router.post('/', (req, res) => {
     console.log('book post')
     const newBook = new Book({
@@ -32,7 +21,6 @@ router.post('/', (req, res) => {
     newBook.save().then(book => res.json(book));
 });
 
-// update a book 
 router.put('/:id', (req, res) => {
     console.log('book put');
     Book.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, book) => {
@@ -42,7 +30,6 @@ router.put('/:id', (req, res) => {
     );
 });
 
-// delete a book 
 router.delete('/:id', (req, res) => {
     console.log('book delete');
     Book.findById(req.params.id)
