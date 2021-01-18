@@ -38,7 +38,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/books', booksRouter);
 app.use('/members', membersRouter);
-app.use('/login', loginRouter);
+app.use('/login', loginRouter); // 
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -58,9 +58,8 @@ app.use(function (err, req, res, next) {
 
 //Authentication middleware
 app.use(function (request, response, next) {
-
+  console.log('login fun called');
   if (request.url.includes('/login') || request.url.includes('/assets')) {
-
     next();
     return;
   }

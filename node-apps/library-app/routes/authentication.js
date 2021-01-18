@@ -3,7 +3,7 @@ const router = express.Router()
 const Member = require('../models/member');
 const AuthService = require('../utils/auth-service');
 
-router.post('/login', async (request, response) => {
+router.post('/', async (request, response) => {
     console.log('login post');
     try {
 
@@ -15,8 +15,7 @@ router.post('/login', async (request, response) => {
         const member = await Member.findOne({ "username": username, "password": password });
 
         if (!member)
-            throw new Error("Invalid Member Details")
-
+            throw new Error("Invalid Member Details");
 
         // Generate Token
         const tokenRequest = {
@@ -41,7 +40,6 @@ router.post('/login', async (request, response) => {
         console.error(error)
         response.status(401).json(error);
     }
-
 
 })
 

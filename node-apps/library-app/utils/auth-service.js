@@ -3,8 +3,6 @@ const jwt = require('jsonwebtoken');
 const PRIVATE_KEY = "IMARTICUS~!@#$%^()*^%$#";
 const TOKEN_EXPIRATION_TIMES = '2h';
 
-
-
 const AuthService = {
 
     getToken: function (request) {
