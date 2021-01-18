@@ -3,13 +3,20 @@ var router = express.Router();
 // Book Model
 const Book = require('../models/Book');
 
+module.exports = router;
+
 // get all books
 router.get('/', (req, res) => {
-    console.log('books get')
+    console.log('books get');
     Book.find()
-        .sort({ date: -1 })
+        .sort({ date: -1 }) // explain 
         .then(books => res.json(books))
 });
+
+// db.find();
+// db.findOne({id:"ter354rki575yhf"});
+// db.findMany();
+// db.findAll();
 
 // get one book 
 router.get('/:id', (req, res) => {
@@ -23,7 +30,7 @@ router.get('/:id', (req, res) => {
 
 // add a book 
 router.post('/', (req, res) => {
-    console.log('book post')
+    console.log('book post');
     const newBook = new Book({
         title: req.body.title,
         author: req.body.author,
